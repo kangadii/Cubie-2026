@@ -1,13 +1,63 @@
+# --- Environment & secrets ---
 .env
-node_modules
-
-# Local dev
-venv/
-__pycache__/
-.vscode/
-.DS_Store
-public/demo/*.png
-
-# Env
-.env
+*.env
 .env.local
+.env.*.local
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.pdb
+.venv/
+venv/
+.envrc
+.pytest_cache/
+
+# --- Node / JS ---
+node_modules/
+npm-debug.log*
+yarn-error.log
+pnpm-lock.yaml
+.pnpm-store/
+
+# --- Logs & temp ---
+logs/
+*.log
+*.pid
+*.seed
+*.tmp
+*.temp
+*.cache
+*.coverage
+coverage/
+
+# --- Build & dist ---
+dist/
+build/
+out/
+*.map
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+
+# --- Archives / binaries ---
+*.zip
+*.7z
+*.tar
+*.gz
+*.rar
+*.bak
+*.db
+*.sqlite
+*.sqlite3
+*.npz
+*.npy
+
+# --- Web temp/demo outputs ---
+public/demo/

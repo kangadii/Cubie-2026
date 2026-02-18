@@ -1,0 +1,30 @@
+# Auto-normalize text files to LF in the repo
+* text=auto eol=lf
+
+# Common types treated as text
+*.py  text
+*.js  text
+*.ts  text
+*.jsx text
+*.tsx text
+*.json text
+*.yml text
+*.yaml text
+*.css text
+*.html text
+*.md  text
+*.txt text
+*.sh  text
+*.bat text
+
+# Keep images/binaries untouched
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz  binary
+*.exe binary
+*.dll binary
