@@ -1,1 +1,0 @@
-I have created a bar chart showing the number of shipments by carrier. You can view the chart above.
