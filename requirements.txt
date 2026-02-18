@@ -1,0 +1,14 @@
+fastapi
+flask
+google-genai
+numpy
+python-dotenv
+uvicorn
+sqlalchemy
+pyodbc
+pandas
+uvicorn[standard]
+pymssql
+plotly==5.20.0       
+bcrypt==5.0.0
+itsdangerous==2.2.0

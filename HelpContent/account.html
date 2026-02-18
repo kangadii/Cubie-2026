@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Admin Cube User Guides</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+            z-index: 1000;
+            position: relative;
+            text-align: left;
+        }
+
+        .breadcrumb a {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+            color: #3a86ff;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 20px;
+            z-index: 900;
+            width: 240px;
+            height: 100%;
+            padding-top: 60px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #3a86ff #f1f1f1;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: normal;
+            transition: color 0.3s ease;
+            font-size: 16px;
+            padding-left: 20px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #007bff;
+        }
+
+        .sidebar ul li .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #3a86ff;
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 34px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        section img {
+            max-width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> > <a href="admincube.html">Admin Cube User Guides</a> > Account
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="admincube.html" class="section-title">Admin Cube</a></li>
+            <li><a href="carrier.html">Carrier</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="lane.html">Lane</a></li>
+            <li><a href="charge-mapping.html">Charge Mapping</a></li>
+            <li><a href="fuel-surcharge.html">Fuel Surcharge</a></li>
+            <li><a href="user-profile.html">User Profile</a></li>
+            <li><a href="role.html">Role</a></li>
+            <li><a href="tcube-master.html">TCube Master</a></li>
+            <li><a href="email-template.html">Email Template</a></li>
+            <li><a href="exchange-rates.html">Exchange Rates</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Account</h1>
+
+        <section>
+            <h2>Overview</h2>
+            <p>The <strong>Account</strong> tab provides a detailed interface for:</p>
+            <ul>
+                <li>Viewing existing carrier accounts in a table format.</li>
+                <li>Adding new carrier accounts.</li>
+                <li>Configuring specific account-related settings such as thresholds, UOMs, and currency.</li>
+                <li>Managing account settings through various options in the dashboard.</li>
+            </ul>
+            <img src="img/account.png" alt="Account Dashboard">
+        </section>
+
+        <section>
+            <h2>Creating a New Carrier Account</h2>
+            <p>To create a new carrier account, follow these steps:</p>
+            <ul>
+                <li>Navigate to the <strong>Account</strong> tab from the left-hand menu.</li>
+                <li>Select <strong>Account</strong> from the navigation sidebar. The Account table with all existing accounts will display.</li>
+                <li>Click the <strong>"+" icon</strong> in the top-right corner of the table to open the Add Carrier Account form.</li>
+                <li>Fill in the required fields:
+                    <ul>
+                        <li><strong>Carrier Description:</strong> Select the parent carrier from the dropdown.</li>
+                        <li><strong>Carrier Alias:</strong> Enter the name for the carrier alias.</li>
+                        <li><strong>Origin Location Code:</strong> Enter the relevant origin location.</li>
+                        <li><strong>Meter Number:</strong> Specify the meter number (if applicable).</li>
+                        <li><strong>Tracking Threshold Limit</strong> and <strong>Invoice Threshold Limit:</strong> Input the values for thresholds.</li>
+                        <li><strong>Currency, Weight UOM, and Dimension UOM:</strong> Add the specific settings.</li>
+                    </ul>
+                </li>
+                <li>Click <strong>Save</strong> to create the carrier account.</li>
+            </ul>
+            <img src="img/saveaccounts.png" alt="Save Account">
+        </section>
+
+        <section>
+            <h2>Configuring an Account</h2>
+            <p>After creating a carrier account, you can configure its details further. Follow these steps:</p>
+            <ul>
+                <li>Once the account is created, locate it in the <strong>Account table.</strong></li>
+                <li>Click the <strong>Gear icon</strong> beside the desired carrier account to open the configuration settings.</li>
+                <li>Select the <strong>Rate Config</strong> tab to configure the rate template for the account:
+                    <ul>
+                        <li>Choose <strong>Rate Source</strong> as "Table."</li>
+                        <li>Click the <strong>Edit</strong> button to select the rate template from the available templates.</li>
+                    </ul>
+                </li>
+                <li>Save the changes to apply the configuration.</li>
+            </ul>
+            <img src="img/configureaccount.png" alt="Configure Account">
+        </section>
+    </div>
+
+</body>
+
+</html>

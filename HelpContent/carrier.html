@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrier | Admin Cube User Guides</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+            z-index: 1000;
+            position: relative;
+            text-align: left;
+        }
+
+        .breadcrumb a {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+            color: #3a86ff;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 20px;
+            z-index: 900;
+            width: 240px;
+            height: 100%;
+            padding-top: 60px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #3a86ff #f1f1f1;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: normal;
+            transition: color 0.3s ease;
+            font-size: 16px;
+            padding-left: 20px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #007bff;
+        }
+
+        .sidebar ul li .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #3a86ff;
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 34px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> > <a href="admincube.html">Admin Cube User Guides</a> > Carrier
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="admincube.html" class="section-title">Admin Cube</a></li>
+            <li><a href="#carrier">Carrier</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#lane">Lane</a></li>
+            <li><a href="#charge-mapping">Charge Mapping</a></li>
+            <li><a href="#fuel-surcharge">Fuel Surcharge</a></li>
+            <li><a href="#user-profile">User Profile</a></li>
+            <li><a href="#role">Role</a></li>
+            <li><a href="#tcube-master">TCube Master</a></li>
+            <li><a href="#email-template">Email Template</a></li>
+            <li><a href="#exchange-rates">Exchange Rates</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Carrier</h1>
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>The Carrier tab in Admin Cube is a comprehensive feature designed to manage carrier details effectively. This module provides a centralized interface for creating, updating, uploading, and exporting carrier data. With an intuitive dashboard, users can perform essential tasks like carrier setup, template downloads, and table exports.</p>
+            <img src="img/carriertab.png" alt="Carrier Tab Dashboard">
+            <h3>Key Features of the Carrier Tab:</h3>
+            <ul>
+                <li><strong>Dashboard Navigation:</strong> Provides access to existing carriers in a table format, displaying carrier codes, descriptions, identifiers, weight units (UOM), dimension units (UOM), and surcharge types.</li>
+                <li><strong>Carrier Creation:</strong> Users can add new carriers by clicking the "+" icon. Details such as carrier code, description, weight UOM, dimension UOM, and surcharge type can be entered.</li>
+                <li><strong>Uploading Carrier Data:</strong> Users can upload carrier data in bulk using a CSV file by clicking the Cloud Upload button. Template CSV files can be downloaded to populate and upload carrier details seamlessly.</li>
+                <li><strong>Export Functionality:</strong> Export existing table data into an Excel file by clicking the Export to Excel button. Ensures easy offline access and data sharing.</li>
+                <img src="img/carriertable.png" alt="Carrier Table Dashboard">
+            </ul>
+        </section>
+
+        <section id="uploading-new-carriers">
+            <h2>Uploading New Carriers</h2>
+            <img src="img/plusicon.png" alt="Plus Icon">
+            <h3>Creating a New Carrier Manually:</h3>
+            <p>Click on the "+" icon in the top-right menu. Fill in the required fields:</p>
+            <ul>
+                <li><strong>Carrier Code:</strong> A unique identifier as per the rate template.</li>
+                <li><strong>Carrier Description:</strong> A brief description of the carrier.</li>
+                <li><strong>Identifier, Weight UOM, and Dimension UOM:</strong> Specific details related to the carrier.</li>
+                <li><strong>Surcharge Type:</strong> Optional selection, based on additional charges.</li>
+            </ul>
+            <p>Click Save to complete the carrier setup.</p>
+            <img src="img/savecarrier.png" alt="Save Carrier Details">
+            <h3>Uploading Multiple Carriers via CSV:</h3>
+            <p>Use the Cloud Upload button on the upper right-hand corner of the table to upload an Excel file. Steps:</p>
+            <ul>
+                <li>Click on the Cloud Upload button.</li>
+                <li>Drag and drop or browse to upload the Excel file.</li>
+                <li>Ensure the CSV follows the template structure, which can be downloaded using the "Download Template" button.</li>
+            </ul>
+            <p><strong>Downloading the Template:</strong> Click the Carrier Template CSV download button to obtain the empty CSV file. Populate the file with new carrier data and upload it back to the system.</p>
+        </section>
+
+        <section id="table-features">
+            <h2>Table Features</h2>
+            <ul>
+                <li><strong>Column Information:</strong> Displays the carrier code, description, identifier, and various units of measurement.</li>
+                <li><strong>Search and Navigation:</strong> Utilize the search bar at the top of the table to locate specific carriers quickly.</li>
+                <li><strong>Edit Existing Carriers:</strong> Click the pencil icon to edit carrier details.</li>
+                <li><strong>Exporting Data:</strong> Click the Export to Excel button to download the table view into an Excel file.</li>
+            </ul>
+            <img src="img/carriertable.png" alt="Carrier Table View">
+        </section>
+    </div>
+</body>
+
+</html>

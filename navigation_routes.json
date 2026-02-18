@@ -1,0 +1,282 @@
+{
+    "routes": [
+        {
+            "id": "rate-calculator",
+            "name": "Rate Calculator",
+            "url": "http://dev.tcube360.com/#/rate-calculator",
+            "keywords": [
+                "rate calculator",
+                "calculate rate",
+                "rate calc",
+                "pricing tool",
+                "calculate shipping",
+                "get rates",
+                "shipping calculator",
+                "check rates",
+                "price lookup",
+                "shipping cost",
+                "how much to ship",
+                "quote",
+                "get a quote",
+                "rate quote",
+                "rate inquiry"
+            ],
+            "description": "Calculate shipping rates for different carriers and services"
+        },
+        {
+            "id": "rate-maintenance",
+            "name": "Rate Maintenance",
+            "url": "http://dev.tcube360.com/#/rate-maintenance",
+            "keywords": [
+                "rate maintenance",
+                "edit rates",
+                "manage rates",
+                "update rates",
+                "modify rates",
+                "rate management",
+                "change prices",
+                "update pricing",
+                "maintain rates",
+                "rate setup",
+                "pricing admin"
+            ],
+            "description": "Manage, edit and update shipping rates"
+        },
+        {
+            "id": "rate-dashboard",
+            "name": "Rate Dashboard",
+            "url": "http://dev.tcube360.com/#/rate-dashboard",
+            "keywords": [
+                "rate dashboard",
+                "rate overview",
+                "rate summary",
+                "rate analytics",
+                "rate kpi",
+                "rate metrics",
+                "pricing dashboard",
+                "spend analysis",
+                "cost overview",
+                "rate reporting"
+            ],
+            "description": "View rate analytics, KPIs and summary dashboards"
+        },
+        {
+            "id": "audit-dashboard",
+            "name": "Audit Dashboard",
+            "url": "http://dev.tcube360.com/#/audit-dashboard",
+            "keywords": [
+                "audit dashboard",
+                "audit overview",
+                "dispute dashboard",
+                "audits",
+                "audit cube",
+                "audit results",
+                "audit findings",
+                "claim overview",
+                "refund dashboard",
+                "recovery dashboard"
+            ],
+            "description": "View and manage shipping audits and disputes"
+        },
+        {
+            "id": "executive-summary",
+            "name": "Executive Summary",
+            "url": "http://dev.tcube360.com/#/executive-summary",
+            "keywords": [
+                "executive summary",
+                "exec summary",
+                "management summary",
+                "high level report",
+                "summary report"
+            ],
+            "description": "High-level executive summary of logistics performance"
+        },
+        {
+            "id": "invoice-details",
+            "name": "Invoice Details",
+            "url": "http://dev.tcube360.com/#/invoice-details",
+            "keywords": [
+                "invoice details",
+                "invoices",
+                "view invoices",
+                "invoice list",
+                "billing details",
+                "bill details"
+            ],
+            "description": "View detailed invoice information"
+        },
+        {
+            "id": "shipment-details",
+            "name": "Shipment Details",
+            "url": "http://dev.tcube360.com/#/shipment-details",
+            "keywords": [
+                "shipment details",
+                "shipments",
+                "view shipments",
+                "shipment list",
+                "delivery details",
+                "load details",
+                "shipment tracking",
+                "track shipment",
+                "Shipment Page",
+                "shipment"
+            ],
+            "description": "View detailed shipment information and tracking"
+        },
+        {
+            "id": "dispute-management",
+            "name": "Dispute Management",
+            "url": "http://dev.tcube360.com/#/dispute-management",
+            "keywords": [
+                "dispute management",
+                "disputes",
+                "dispute details",
+                "manage disputes",
+                "dispute list",
+                "open disputes",
+                "file a claim",
+                "claim status",
+                "contest charges",
+                "carrier disputes",
+                "claims management",
+                "refund claims"
+            ],
+            "description": "Manage carrier disputes and claims"
+        },
+        {
+            "id": "discrepancy-report",
+            "name": "Discrepancy Report",
+            "url": "http://dev.tcube360.com/#/discrepancy-report",
+            "keywords": [
+                "discrepancy report",
+                "billing discrepancies",
+                "errors report",
+                "mismatch report",
+                "variance report"
+            ],
+            "description": "View billing and rate discrepancies"
+        },
+        {
+            "id": "approved-freight-report",
+            "name": "Approved Freight Report",
+            "url": "http://dev.tcube360.com/#/approved-freight-report",
+            "keywords": [
+                "approved freight",
+                "freight report",
+                "approved invoices",
+                "payment report",
+                "freight payment",
+                "approved freight report"
+            ],
+            "description": "Report on approved freight payments"
+        },
+        {
+            "id": "rate-simulation",
+            "name": "Rate Simulation",
+            "url": "http://dev.tcube360.com/#/rate-simulation",
+            "keywords": [
+                "rate simulation",
+                "simulate rates",
+                "cost impact",
+                "what if analysis",
+                "scenario planning",
+                "rate impact"
+            ],
+            "description": "Simulate rate changes and impact analysis"
+        },
+        {
+            "id": "amendment-report",
+            "name": "Amendment Report",
+            "url": "http://dev.tcube360.com/#/amendment-report",
+            "keywords": [
+                "amendment report",
+                "contract amendments",
+                "rate changes report",
+                "modification report",
+                "amendments"
+            ],
+            "description": "Report on contract and rate amendments"
+        },
+        {
+            "id": "contract-analysis",
+            "name": "Contract Analysis",
+            "url": "http://dev.tcube360.com/#/contract-analysis",
+            "keywords": [
+                "contract analysis",
+                "contract review",
+                "agreement analysis",
+                "contract performance",
+                "carrier contracts"
+            ],
+            "description": "Analyze carrier contracts"
+        },
+        {
+            "id": "route-group",
+            "name": "Route Group",
+            "url": "http://dev.tcube360.com/#/route-group",
+            "keywords": [
+                "route group",
+                "group routes",
+                "lane groups",
+                "shipping lanes",
+                "route group details"
+            ],
+            "description": "Manage route groups"
+        },
+        {
+            "id": "route-rule",
+            "name": "Route Rule",
+            "url": "http://dev.tcube360.com/#/route-rule",
+            "keywords": [
+                "route rule",
+                "routing rules",
+                "selection rules",
+                "carrier selection",
+                "routing logic"
+            ],
+            "description": "Manage routing rules"
+        },
+        {
+            "id": "unit-change-report",
+            "name": "Unit Change Report",
+            "url": "http://dev.tcube360.com/#/unit-change-report",
+            "keywords": [
+                "unit change report",
+                "unit changes",
+                "measurement changes",
+                "currency change report"
+            ],
+            "description": "Report on unit modifications"
+        },
+        {
+            "id": "rate-config",
+            "name": "Rate Configuration",
+            "url": "http://dev.tcube360.com/#/rate-config",
+            "keywords": [
+                "rate config",
+                "rate configuration",
+                "setup rates",
+                "supplement rate config",
+                "system configuration"
+            ],
+            "description": "Configure rate settings"
+        },
+        {
+            "id": "unlocode",
+            "name": "UN/LOCODE",
+            "url": "http://dev.tcube360.com/#/unlocode",
+            "keywords": [
+                "unlocode",
+                "location codes",
+                "port codes",
+                "check location",
+                "united nations location"
+            ],
+            "description": "Lookup UN/LOCODEs"
+        }
+    ],
+    "base_url": "",
+    "version": "1.2",
+    "mode": "angular",
+    "_comment": "URLs are absolute for development testing but can be handled relatively by the specific frontend implementation."
+}

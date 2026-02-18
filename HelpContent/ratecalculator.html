@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Calculator User Guide</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: white;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            text-align: left;
+            padding-left: 20px;
+            z-index: 1000;
+            position: relative;
+        }
+
+        .breadcrumb a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+            color: #3a86ff;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 80%;
+	    border: 2px solid #ccc;
+        }
+
+        p, ul, li {
+            margin-bottom: 16px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 20px;
+            width: 240px;
+            height: 100%;
+            padding-top: 60px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #3a86ff #f1f1f1;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            padding-left: 20px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #007bff;
+        }
+
+        .sidebar ul li .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #3a86ff;
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            font-size: 22px;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .content h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        .content h4 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f5f5f5;
+            font-weight: 600;
+        }
+
+        .note-box {
+            background-color: #e3f2fd;
+            border-left: 4px solid #3a86ff;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .info-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #2196F3;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> > <a href="rate-cube-user-guide.html">Rate Cube User Guides</a> > <span>Rate Calculator</span>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="rate-cube-user-guide.html" class="section-title">Overview</a></li>
+            <li><span class="section-title">Rate Maintenance</span>
+                <ul>
+                    <li><a href="ratemaintenance.html">Overview</a></li>
+                    <li><a href="ratemaintenance.html#key-features">Key Features</a></li>
+                    <li><a href="ratemaintenance.html#active-rates">Active Rates</a></li>
+                    <li><a href="ratemaintenance.html#draft-rates">Draft Rates</a></li>
+                    <li><a href="ratemaintenance.html#rate-simulation">Simulation</a></li>
+                    <li><a href="ratemaintenance.html#uploading-rates">Uploading Rates</a></li>
+                    <li><a href="ratemaintenance.html#ofa-rfa-processes">OFA and RFA Processes</a></li>
+                    <li><a href="ratemaintenance.html#task-visualization">Task Visualization</a></li>
+                    <li><a href="ratemaintenance.html#unit-change-report">Unit Change Report</a></li>
+                    <li><a href="ratemaintenance.html#troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </li>
+            <li><span class="section-title">Rate Simulation</span>
+                <ul>
+                    <li><a href="ratesimulation.html#overview" class="sidebar-link">Overview</a></li>
+                    <li><a href="ratesimulation.html#location-information" class="sidebar-link">Location Information</a></li>
+                    <li><a href="ratesimulation.html#adding-shipment-details" class="sidebar-link">Adding Shipment Details</a></li>
+                    <li><a href="ratesimulation.html#using-special-services" class="sidebar-link">Using Special Services</a></li>
+                    <li><a href="ratesimulation.html#generating-simulations" class="sidebar-link">Generating Simulations</a></li>
+                    <li><a href="ratesimulation.html#customizing-results" class="sidebar-link">Customizing Results</a></li>
+                    <li><a href="ratesimulation.html#successful-rate-simulation" class="sidebar-link">Successful Rate Simulation</a></li>
+                </ul>
+            </li>
+            <li><span class="section-title">Rate Calculator</span>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#input-fields">Input Fields</a></li>
+                    <li><a href="#output-overview">Output Overview</a></li>
+                    <li><a href="#region-specific-details">Region-Specific Details</a></li>
+                    <li><a href="#charge-breakdown">Charge Breakdown</a></li>
+                    <li><a href="#additional-notes">Additional Features</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Rate Calculator</h1>
+
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>The Rate Calculator within Ratecube is a powerful tool designed to calculate shipment costs based on input demographics and shipment details. By using this tool, users can generate precise cost calculations, view detailed charge breakdowns, and identify all relevant shipment parameters for different service levels and modes of transport.</p>
+            <img src="img/RC_overview.png" alt="Rate Calculator Overview">
+        </section>
+
+        <section id="input-fields">
+            <h2>Rate Calculator Input Fields</h2>
+            <p>The input fields on the Rate Calculator screen are essential for calculating shipment costs accurately. Each section has specific fields that require completion to ensure valid and meaningful results.</p>
+
+            <h3>Calculate Using - Calculation Method Selection</h3>
+            <p>The <strong>Calculate Using</strong> dropdown allows you to choose the primary input mode for the Rate Calculator. This determines how you will search for and load lane information.</p>
+            <ul>
+                <li><strong>Lane ID / Rate ID Mode:</strong> Use this mode when you have a specific Lane ID or Rate ID. Once entered and the <strong>Search</strong> button is clicked, the system automatically retrieves and prepopulates the following fields:
+                    <ul>
+                        <li>Origin and destination details (city, state, country, postal code)</li>
+                        <li>Carrier information (carrier, service level)</li>
+                    </ul>
+                </li>
+
+                <div>
+   		 <img src="img/RC_LaneID.png" alt="RC_LaneID" style="width:100%; display:block;">
+   		 <img src="img/RC_RateID.png" alt="RC_RateID" style="width:100%; display:block;">
+		</div>
+
+                <li><strong>Manual Mode:</strong> Use this mode to search for lanes manually using Origin and Destination details (city, state, country, postal code). This option is useful when you don't have a specific Lane ID or Rate ID but know your shipment's origin and destination.</li>
+		<div>
+   		 <img src="img/RC_Manual.png" alt="RC_Manual" style="width:100%; display:block;">
+   		</div>
+
+            </ul>
+
+            <h3>Lane Identification</h3>
+            <p>Select the calculation method via the <strong>Calculate Using</strong> dropdown, then enter the appropriate identifier:</p>
+            <ul>
+                <li><strong>Lane ID:</strong> A predefined shipment lane identifier (also called <em>Item ID</em> in Rate Maintenance). Enter the Lane ID in the text field and click <strong>Search</strong> to retrieve lane information.</li>
+                <li><strong>Rate ID:</strong> A unique identifier for a specific rate record (also called <em>Unique ID</em> in Rate Maintenance). Enter the Rate ID and click <strong>Search</strong>.</li>
+				<li><strong>Manual:</strong> Manually enter Origin and Destination city details to search and calculate rates.</li>
+            </ul>
+            <p><strong>Note:</strong> Both Lane ID and Rate ID must reference active records in Rate Maintenance for the calculation to succeed.</p>
+
+            <h3>Search Buttons</h3>
+            <ul>
+                Click after entering a Lane ID or Rate ID to automatically retrieve and populate the Origin, Destination, and Carrier information. The system will perform validation and load all related details.</li>
+			</ul>
+  	    <h3>Lane Finder</h3>
+	    <ul>
+                 Click to open a popup dialog that helps you search for available lanes. On the basis of Origin and Destination details, you can search for existing lanes with given Origin and Destination information. This is helpful when you don't know the specific Lane ID.</li>
+
+<h4>Lane Finder Workflow</h4>
+<ol>
+<li>Click <strong>Lane Finder</strong> button to open the dialog</li>
+<img src="img/RC_LaneFinder.png" alt="Lane Finder Overview">
+<li>Select <strong>Origin City</strong> (required - marked with *)</li>
+<li>Select <strong>Destination City</strong> (required - marked with *) from the filtered options</li>
+<li>Optionally add Origin State, Zip, or Destination State, Zip to refine results</li>
+<li>Click <strong>Search Lanes</strong> to view matching lanes</li>
+<img src="img/RC_LaneFinder2.png" alt="Lane Finder2 Overview">
+<li>Check the checkbox next to your desired lane and click <strong>Select Lanes</strong> to load it</li>
+<img src="img/RC_LaneFinder3.png" alt="Lane Finder3Overview">
+<li>Once you select a lane from the Lane Finder results, the system automatically loads it into your Rate Calculator screen </li>
+<img src="img/RC_LaneFinder4.png" alt="Lane Finder4Overview">
+</ol>
+ 
+<p><strong>Tip:</strong> The grid displays Lane ID, Rate ID, Carrier, Mode of Transport, and location details for each result. You can export results to Excel or see detailed information by expanding rows.</p>
+ 
+<hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
+ 
+
+		
+		
+		
+
+            </ul>
+
+            <h3>Lane Characteristics</h3>
+            <p>This section allows you to specify shipment characteristics through checkbox selections and a Business Unit selector:</p>
+            <ul>
+                <li><strong>General Cargo</strong> - Checkbox to indicate a general cargo shipment (standard shipments with no special requirements)</li>
+                <li><strong>Temperature Control</strong> - Checkbox to indicate a temperature-controlled shipment</li>
+                <li><strong>Hazardous Material</strong> - Checkbox to indicate a hazardous material shipment</li>
+                <li><strong>High Value</strong> - Checkbox to indicate a high-value cargo shipment</li>
+                <li><strong>Business Unit:</strong> Dropdown to select the applicable business unit (e.g., Advanced Therapy Lane, Clinical Lane). This field may be required depending on your organization's configuration.</li>
+            </ul>
+
+            <h3>Origin Information</h3>
+            <p>Define the shipment's starting point. These fields are automatically populated when you enter a Lane ID or Rate ID and click <strong>Search</strong>:</p>
+            <ul>
+                <li><strong>Origin Country:</strong> Auto-complete field to select the origin country</li>
+                <li><strong>Origin State:</strong> Text field for the origin state or province</li>
+                <li><strong>Origin City (Mandatory):</strong> Auto-complete field for the origin city - this is a required field</li>
+                <li><strong>Origin Zip:</strong> Text field for origin postal/ZIP code</li>
+                <li><strong>Origin Port Code:</strong> Text field for the origin port code (applicable for ocean/port shipments)</li>
+                <li><strong>Origin Service Type:</strong> Dropdown to select the origin service type</li>
+            </ul>
+            <p><strong>Note:</strong> These fields are only required if you do not use Lane ID or Rate ID. The selected Origin must have an active Rate Card record in Rate Maintenance for the calculation to succeed.</p>
+
+            <h3>Destination Information</h3>
+            <p>Define the shipment's endpoint. These fields are automatically populated when you enter a Lane ID or Rate ID and click <strong>Search</strong>:</p>
+            <ul>
+                <li><strong>Destination Country:</strong> Auto-complete field to select the destination country</li>
+                <li><strong>Destination State:</strong> Text field for the destination state or province</li>
+                <li><strong>Destination City (Mandatory):</strong> Auto-complete field for the destination city - this is a required field</li>
+                <li><strong>Destination Zip:</strong> Text field for destination postal/ZIP code</li>
+                <li><strong>Destination Port Code:</strong> Text field for the destination port code (applicable for ocean/port shipments)</li>
+                <li><strong>Destination Service Type:</strong> Dropdown to select the destination service type</li>
+            </ul>
+            <p><strong>Note:</strong> These fields are only required if you do not use Lane ID or Rate ID. The selected Destination must have an active Rate Card record in Rate Maintenance for the calculation to succeed.</p>
+
+            <h2>Shipment Details and Pricing Context</h2>
+
+            <h3>Shipment Date and Delivery Information</h3>
+            <ul>
+                <li><strong>Shipment Date (Mandatory):</strong> Date picker for the planned shipment date. This date must fall between the Valid From and Valid To dates of the Rate Card selected in Rate Maintenance.</li>
+                <li><strong>Expected Delivery Date (Optional):</strong> Optional date picker for the expected delivery date</li>
+            </ul>
+
+            <h3>Carrier and Service Details</h3>
+            <ul>
+                <li><strong>Carrier:</strong> Auto-complete field to select the carrier</li>
+                <li><strong>Service Level:</strong> Auto-complete field to select the service level</li>
+            </ul>
+
+            <h3>Units and Currency</h3>
+            <ul>
+                <li><strong>UOM (Unit of Measurement) (Mandatory):</strong> Dropdown to select the unit of measure for weight/dimensions:
+                    <ul>
+                        <li>KG/CM (Kilogram/Centimeter) - Metric units</li>
+                        <li>LB/in (Pound/Inch) - Imperial units</li>
+                    </ul>
+                </li>
+                <li><strong>Exchange Currency (Mandatory):</strong> Dropdown to select the currency used for rate calculation (e.g., USD, EUR, CAD)</li>
+            </ul>
+
+            <h2>Package and Weight Breakdown</h2>
+            <p>Header totals display the aggregate of the package grid entries. These fields are read-only and auto-populate as you enter package details.</p>
+
+<section id="output-overview">
+    <h2>Output Overview</h2>
+    <p>Once all required fields are entered and the <strong>Search</strong> button is clicked, the Rate Calculator generates detailed output for the shipment in the <strong>RATE DETAILS</strong> section. The output includes:</p>
+    <ul>
+        <li><strong>Rate Details:</strong> Displays calculated charges organized by Carrier Name, Service Code, Lane ID, Mode of Transport, Total Charges, and Currency.</li>
+        <li><strong>Total Cost:</strong> The sum of all applicable charges for the shipment (displayed as a clickable link).</li>
+        <li><strong>Breakdown by Template:</strong> Click on Total Charges to view itemized charges. Charge codes are grouped based on predefined templates to ensure clarity.</li>
+        <li><strong>Result Type Options:</strong> View results as Grid (table format) or Carrier Wise (grouped by carrier).</li>
+    </ul>
+    <img src="img/RC_Output.png" alt="RC_Output">
+</section> 
+
+        <section id="region-specific-details">
+            <h2>Region-Specific Details</h2>
+        
+            <h3>North America (Road NA)</h3>
+            <p>The output is simplified and focuses primarily on:</p>
+            <ul>
+                <li><strong>Base Rate:</strong> The core cost of transporting goods within the region.</li>
+                <li><strong>Fuel Surcharge:</strong> Adjusts costs based on fluctuating fuel prices.</li>
+            </ul>
+            <p>There are no subcategories (e.g., FTL or LTL) within Road NA, making it straightforward and ideal for standard road transport within North America.</p>
+            <img src="img/RC_NARate.png" alt="NA Charge Breakdown">
+        
+            <h3>Europe, Middle East, and Africa (Road EMEA)</h3>
+            <p>The output for Road EMEA is divided into three subcategories, depending on the type of shipment. Each has unique templates for calculating charges:</p>
+            <ul>
+                <li>
+                    <strong>Full Truckload (FTL):</strong> Includes the Base Rate, surcharges for specialized equipment (e.g., double-deck trucks), and costs for extra days or weekend handling.
+                    <ul>
+                        <li>Designed for large shipments requiring the full capacity of a truck.</li>
+                    </ul>
+                    <img src="img/RC_EMEA_FTL.png" alt="FTL Charge Breakdown">
+                </li>
+                <li>
+                    <strong>Less Than Truckload (LTL):</strong> Focuses on the Base Rate and surcharges for dangerous goods or additional handling requirements.
+                    <ul>
+                        <li>Ideal for smaller shipments sharing truck space with other goods.</li>
+                    </ul>
+                    <img src="img/RC_EMEA_LTL.png" alt="LTL Charge Breakdown">
+                </li>
+                <li>
+                    <strong>Premium Post Merge Express (PMPME):</strong> Tailored for expedited and high-priority shipments.
+                    <ul>
+                        <li>Includes Base Rate and additional surcharges for hazardous goods and specialized handling.</li>
+                    </ul>
+                    <img src="img/RC_EMEA_PMPME.png" alt="PMPME Charge Breakdown">
+                    </li>
+            </ul>
+        
+            <h3>Air Shipments</h3>
+            <p>Air shipment outputs are focused on speed and premium services. The breakdown typically includes:</p>
+            <ul>
+                <li><strong>Base Rate:</strong> Calculated based on weight, volume, and distance.</li>
+                <li><strong>Fuel Surcharge:</strong> Reflecting the cost of jet fuel adjustments.</li>
+                <li><strong>Security Risk Surcharge:</strong> Applied to sensitive or high-risk cargo.</li>
+            </ul>
+            <p>Transit times are shorter, with detailed timelines for delivery.</p>
+		<img src="img/RC_AIR_RATES.png" alt="AIR Charge Breakdown">
+
+        
+            <h3>Ocean Shipments</h3>
+            <p>Outputs for ocean shipments include:</p>
+            <ul>
+                <li><strong>Base Rate:</strong> Adjusted for long-distance transport and high-volume goods.</li>
+                <li><strong>Port Handling Charges:</strong> Costs associated with loading/unloading at origin and destination ports.</li>
+                <li><strong>Dangerous Goods Surcharge:</strong> Additional costs for hazardous materials.</li>
+            </ul>
+            <p>Delivery dates and transit days are typically longer, reflecting maritime schedules.</p>
+	    <img src="img/RC_GT_Ocean.png" alt="Ocean Charge Breakdown">
+        </section>
+
+
+<section id="charge-breakdown">
+    <h2>Charge Breakdown</h2>
+    <p>The Shipment Charges and Taxes section provides a comprehensive breakdown of individual charges applied to the shipment. Each charge is displayed with a code, description, and associated cost.</p>
+    <ul>
+        <li><strong>Base Rate:</strong> The primary cost of the shipment.</li>
+        <li><strong>Fuel Surcharge:</strong> Additional costs reflecting fluctuating fuel prices.</li>
+        <li><strong>Hazardous Material Handling:</strong> Charges for shipments containing dangerous goods.</li>
+        <li><strong>Extra Days Cost:</strong> Costs incurred for extended delivery timelines or weekend handling.</li>
+        <li><strong>Security Risk Surcharge:</strong> Fees associated with high-security or sensitive shipments.</li>
+    </ul>
+    <p>Additional charges may include: Pre Carriage, On Carriage, Origin/Destination Warehouse Handling, Export/Import Custom Brokerage, ULD-related charges, Data Logger Handling, and other service-specific charges based on the selected rate and services. Charges with a value of <strong>0.00</strong> indicate that the charge does not apply to the shipment.</p>
+    <img src="img/RC_Charge_Breakdown.png" alt="Charge Breakdown">
+</section>
+
+        
+<section id="additional-notes">
+    <h2>Additional Notes and Features</h2>
+    <ul>
+        <li><strong>Special Services:</strong> Select from optional services in the Special Services tab. Each selected service adds specific charges to the final calculation. Service availability depends on the MoT, carrier, and route selected.</li>
+        <li><strong>Data Export:</strong> Results can be exported to Excel using the <strong>Export</strong> button for analysis or record-keeping.</li>
+        <li><strong>Error Handling:</strong> Ensure all mandatory fields marked with * are completed. At least one of <em>Total Chargeable Weight</em> or complete dimension data (Length, Width, Height) is required. Lane ID/Rate ID must reference active records in Rate Maintenance. Shipment Date must fall within the Valid From and Valid To dates of the selected Rate Card.</li>
+    </ul>
+</section>
+
+        
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is the difference between Lane ID and Rate ID?</h3>
+    <p>Lane ID (called <em>Item ID</em> in Rate Maintenance) corresponds to predefined shipment lanes. Rate ID (called <em>Unique ID</em> in Rate Maintenance) is the unique identifier for a specific rate record. Both must reference active records in Rate Maintenance.</p>
+
+    <h3>Can I calculate costs for shipments containing hazardous materials?</h3>
+    <p>Yes, ensure the "Dangerous Goods" field is populated under Cargo Information.</p>
+
+    <h3>What does "Chargeable Weight" mean?</h3>
+    <p>It is the calculated weight used to determine shipping costs, derived from both the actual weight and volume.</p>
+
+    <h3>Do I need to enter Origin and Destination if I provide Lane ID or Rate ID?</h3>
+    <p>No. When you enter Lane ID or Rate ID and click <strong>Go</strong>, the system automatically populates Origin and Destination details. These fields are only required if you do not use Lane ID or Rate ID.</p>
+
+    <h3>What date should I enter for Shipment Date?</h3>
+    <p>The Shipment Date must fall between the Valid From and Valid To dates of the Rate Card selected in Rate Maintenance. The system will validate this and prevent calculations for dates outside this range.</p>
+
+    <h3>What are Extra Lease Days, Data Logger Count, Container Count, and UN Number Count?</h3>
+    <p>These are optional parameters that apply specific charges if required:</p>
+    <ul>
+        <li><strong>Extra Lease Days:</strong> Number of additional days for equipment lease.</li>
+        <li><strong>Data Logger Count:</strong> Number of temperature/humidity monitoring devices.</li>
+        <li><strong>Container Count:</strong> Total number of containers in shipment.</li>
+        <li><strong>UN Number Count:</strong> Number of UN-classified hazardous items for compliance tracking.</li>
+    </ul>
+
+    <h3>What does the Special Services tab do?</h3>
+    <p>The Special Services tab allows you to select optional add-on services (40+) for your shipment. Each selected service applies specific surcharges to the final cost calculation. Services available depend on your MoT and route selected.</p>
+</section>
+
+    </div>
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+.env
+node_modules
+
+# Local dev
+venv/
+__pycache__/
+.vscode/
+.DS_Store
+public/demo/*.png
+
+# Env
+.env
+.env.local

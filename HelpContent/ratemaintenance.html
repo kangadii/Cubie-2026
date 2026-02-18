@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Maintenance User Guide</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Breadcrumb navigation styling */
+        .breadcrumb {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+            margin-top: 10px; /* Add consistent spacing from the top */
+            text-align: left;
+            position: relative;
+            z-index: 10;
+            padding-left: 20px; /* Optional, for consistent alignment */
+        }
+
+
+        /* Breadcrumb link default state */
+        .breadcrumb a {
+            color: inherit; /* Inherit the default breadcrumb color (#888) */
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Breadcrumb link hover state */
+        .breadcrumb a:hover {
+            text-decoration: underline;
+            color: #3a86ff; /* Change to blue only on hover */
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            max-width: 60%;
+        }
+
+        p, ul, li {
+            margin-bottom: 16px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Sidebar adjustments */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 20px;
+            width: 240px;
+            height: 100%;
+            padding-top: 60px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #3a86ff #f1f1f1;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: normal;
+            transition: color 0.3s ease;
+            font-size: 16px;
+            padding-left: 20px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #007bff;
+        }
+
+        .sidebar ul li .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #3a86ff;
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+
+        .active-section {
+            background-color: rgba(58, 134, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Content padding */
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .content h2 {
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .content h3 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> > <a href="rate-cube-user-guide.html">Rate Cube User Guides</a> > <span>Rate Maintenance</span>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="rate-cube-user-guide.html" class="section-title">Overview</a></li>
+            <li><span class="section-title">Rate Maintenance</span></li>
+            <li><a href="ratemaintenance.html">Overview</a></li>
+            <li><a href="ratemaintenance.html#key-features">Key Features</a></li>
+            <li><a href="ratemaintenance.html#active-rates">Active Rates</a></li>
+            <li><a href="ratemaintenance.html#draft-rates">Draft Rates</a></li>
+            <li><a href="ratemaintenance.html#rate-simulation">Simulation</a></li>
+            <li><a href="ratemaintenance.html#uploading-rates">Uploading Rates</a></li>
+            <li><a href="ratemaintenance.html#ofa-rfa-processes">OFA and RFA Processes</a></li>
+            <li><a href="ratemaintenance.html#task-visualization">Task Visualization</a></li>
+            <li><a href="ratemaintenance.html#unit-change-report">Unit Change Report</a></li>
+            <li><a href="ratemaintenance.html#troubleshooting">Troubleshooting</a></li>
+            <li><span class="section-title">Rate Simulation</span></li>
+            <li><a href="ratesimulation.html#overview" class="sidebar-link">Overview</a></li>
+            <li><a href="ratesimulation.html#location-information" class="sidebar-link">Location Information</a></li>
+            <li><a href="ratesimulation.html#adding-shipment-details" class="sidebar-link">Adding Shipment Details</a></li>
+            <li><a href="ratesimulation.html#using-special-services" class="sidebar-link">Using Special Services</a></li>
+            <li><a href="ratesimulation.html#generating-simulations" class="sidebar-link">Generating Simulations</a></li>
+            <li><a href="ratesimulation.html#customizing-results" class="sidebar-link">Customizing Results</a></li>
+            <li><a href="ratesimulation.html#successful-rate-simulation" class="sidebar-link">Successful Rate Simulation</a></li>
+            <li><span class="section-title">Rate Calculator</span></li>
+            <li><a href="ratecalculator.html#overview" class="sidebar-link">Overview</a></li>
+            <li><a href="ratecalculator.html#input-fields" class="sidebar-link">Input Fields</a></li>
+            <li><a href="ratecalculator.html#output-overview" class="sidebar-link">Output Overview</a></li>
+            <li><a href="ratecalculator.html#region-specific-details" class="sidebar-link">Region-Specific Details</a></li>
+            <li><a href="ratecalculator.html#charge-breakdown" class="sidebar-link">Charge Breakdown</a></li>
+            <li><a href="ratecalculator.html#additional-notes" class="sidebar-link">Additional Features</a></li>
+            <li><a href="ratecalculator.html#faq" class="sidebar-link">Frequently Asked Questions</a></li>
+
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Rate Maintenance User Guide</h1>
+    
+        <section id="overview">
+            <h1>Overview</h1>
+            <p>The Rate Maintenance Dashboard in RateCube provides users with centralized control to manage carrier rates across multiple transportation modes. Users can track, edit, validate, and upload rates while ensuring compliance with organizational policies. The dashboard's modular design caters to various statuses such as Active, Draft, Future Draft Approved, Future Draft and Expired rates, each offering specific functionalities.</p>
+            <img src="img/ratemaintenancedash.png" alt="Rate Maintenance Main View">
+	    <img src="img/RM_draft.png" alt="Rate Maintenance Draft Main View">
+            <h2>Key Benefits:</h2>
+            <ul>
+                <li>Centralized Freight Rate Management includes adding, organizing, and automating freight rates to ensure accurate and efficient shipping services across various transportation modes.</li>
+                <li>Easy rate upload, approval, versioning, search, and automation of freight rates, covering multiple transportation modes for leading logistics service providers.</li>
+                <li>Bulk uploads and direct row-level editing. Carrier specific rate templates for all transportation modes.</li>
+                <li>Simplified tracking of rate validity periods.</li>
+                <li>Real Time Rate simulations by combining rate evaluations for freight rates in RateCube and API calls with all parcel service providers</li>
+            </ul>
+        </section>
+
+        <section id="key-features">
+            <h1>Key Features</h1>
+            <p>The image above showcases the default view of the Rate Maintenance Dashboard, focusing on Active Rates:</p>
+
+<h2>Columns:</h2>
+
+<h3>Active Rates View</h3>
+<ul>
+    <li><strong>Amendment Reference:</strong> Links to amendments associated with rates (for Active Rates view).</li>
+    <li><strong>OFA Reference:</strong> Unique identifier for Offer for Amendment.</li>
+    <li><strong>Validity Period:</strong> "Valid From" and "Valid To" dates tracking when rates are active.</li>
+    <li><strong>Created On:</strong> Date when the amendment/rate was created.</li>
+    <li><strong>Created By:</strong> User who created the amendment/rate.</li>
+</ul>
+
+<h3>Draft Rates View</h3>
+<ul>
+    <li><strong>Contract ID:</strong> Unique identifier for draft and active contracts (displayed in Draft Rates view).</li>
+    <li><strong>Carrier Code:</strong> Code associated with the carrier.</li>
+    <li><strong>Status:</strong> Current state of the rate (Active, Draft, Expired, Future Draft Approved, Future Draft).</li>
+    <li><strong>Uploaded By:</strong> User who uploaded the rate.</li>
+    <li><strong>Changed On:</strong> Date of the most recent modification.</li>
+</ul>
+
+            <h2>Visualization Section:</h2>
+            <ul>
+                <li>A pie chart displays amendment statuses, such as Approved or Partially Amended.</li>
+                <li>Metrics include Country Total, Rate Total, and Zone Total.</li>
+            </ul>
+            <h2>Actionable Steps:</h2>
+            <ul>
+
+<li>Filter by Template, Status, or Carrier: Use the dropdown filters to narrow down the displayed data:
+    <ul>
+        <li>Template Name (e.g., "GT_Air")</li>
+        <li>Status (e.g., "Active", "Draft", "Expired", "Future Draft Approved", "Future Draft")</li>
+        <li>Carrier Code</li>
+    </ul>
+</li>
+<li>Advanced Search Tab: Switch to the "Advanced Search" tab for more granular filtering options based on contract-specific attributes like Contract ID</li>
+<li>Search Tab: Use the basic search tab for quick filtering by template name and carrier.</li>
+
+            </ul>
+	    <img src="img/KF_Filter.png" alt="Filters: Search">
+	    
+        </section>
+
+        <section id="rate-statuses">
+            <h1>Rate Statuses</h1>
+            <p>Rates in the dashboard are categorized into three statuses:</p>
+            <ul>
+                <li><strong>Active Rates:</strong> The default view showcasing rates currently in use, enabling detailed rate reviews and updates.</li>
+                <li><strong>Draft Rates:</strong> Accessible by selecting Draft from the status dropdown. These rates include Contract IDs, which link to the Draft Contract View for further editing.</li>
+                <li><strong>Expired Rates:</strong> Allows users to review historical rates for reference.</li>
+		<li><strong>Future Draft Approved:</strong> Upcoming rates that have been approved but not yet active.</li>
+		<li><strong>Future Draft:</strong> Upcoming rates pending review and approval.</li>
+            </ul>
+        </section>
+
+        <section id="active-rates">
+            <h1>Active Rates</h1>
+            <p>The Active Rates section enables users to manage and view finalized contract rates. This section is accessible by clicking an “Amendment Reference” number from the main dashboard. The Active Rates dashboard provides users with a clear and interactive view of finalized rates, offering tools for advanced filtering, customization, and detailed editing capabilities:</p>
+<h2>Overview of the Main Screen:</h2>
+            <img src="img/activerates.png" alt="Active Rates Dashboard"
+            <ul>
+                <li><strong>Table Columns:</strong> Displays rate details and includes key information such as:
+        <ul>
+            <li>Amendment Reference: Unique reference number linking to the amendment for this active rate.</li>
+            <li>OFA Reference: Associated Offer for Amendment reference number.</li>
+            <li>Created On: Date when the rate amendment was created.</li>
+            <li>Created By: User who created the amendment.</li>
+        </ul>
+    </li>
+	<img src="img/ActiveRates_Open.png" alt="Active Rates Dashboard">
+    <li><strong>Additional Columns Available:</strong> Users can access additional rate details through:
+        <ul>
+                        <li>Version: Current version number for the rate.</li>
+                        <li>OID: Object/rate identifier.</li>
+                        <li>Remarks: Additional notes or special conditions.</li>
+                        <li>Rate Header ID: Unique identifier for the rate header.</li>
+                        <li>OFA Reference: Associated OFA reference number.</li>
+			<li>Valid</li>
+                        <li>RFAInd: RFA (Request for Amendment) indicator.</li>
+                        <li>Valid From: Rate effective date [Additional columns available through Column Chooser].</li>
+                    </ul>
+		</ul>
+                </li>
+
+<h2>Filter Tools</h2>
+<ul>
+    <li><strong>Advance Search Filter Tools:</strong>
+        <ul>
+            <li>Origin Service</li>
+            <li>Destination Service</li>
+            <li>Lane ID</li>
+            <li>RateCube ID</li>
+            <li>Container Type</li>
+        </ul>
+    </li>
+    <li><strong>Search Filter Tools:</strong>
+        <ul>
+            <li>Origin Country: Filter by origin country</li>
+            <li>Origin City: Filter by origin city</li>
+            <li>Destination Country: Filter by destination country</li>
+            <li>Destination City: Filter by destination city</li>
+            <li>Commodity: Filter by commodity type</li>
+            <li>Service Level: Filter by service level</li>
+            <li>Region of Ownership: Filter by region</li>
+        </ul>
+    </li>
+    <li><strong>Column Chooser:</strong> Located to the right of the Advanced Search, this tool allows users to hide or display specific columns for a tailored view.</li>
+
+                <li><strong>Access Buttons:</strong>
+                    <ul>
+                        <li>"Contract History" Button: Opens a view showing contract history and action timeline</li>
+                        <li>"Rate Card Details" Button: Opens the detailed rate view</li>
+                        <li>"Create Task" Button: Allows creation of tasks related to specific rates</li>
+                    </ul>
+                    <img src="img/ActiveRCdetails.png" alt="ActiveRCdetails.png">
+                </li>
+            </ul>
+            
+            <h2>Rate Card Details: Viewing and Editing Charges</h2>
+            <p>Clicking the "Rate Card Details" icon for any active rate opens the Rate Card Details view, a dedicated interface for viewing comprehensive rate information and making amendments.</p>
+
+<ul>
+    <li><strong>Comprehensive Rate Details:</strong>
+        <ul>
+            <li>Origin and Destination Information: Cities, postal codes, and countries.</li>
+            <li>Carrier and Service Level Information: Carrier details and applicable service levels.</li>
+            <li>Charge Breakdown: Detailed view of Base Rates, surcharges, and other cost components.</li>
+        </ul>
+    </li>
+    <li><strong>Edit Charges - Creating Amendments:</strong>
+        <ul>
+            <li>Users can directly update rates within the detailed view.</li>
+            <li>When modifications are made, changed values are automatically highlighted in red for visibility.</li>
+            <li>Users can save updates as part of a new Offer for Amendment (OFA).</li>
+            <li>Upon saving, the edited rate automatically moves to the Draft Rates section with a generated OFA reference number.</li>
+            <li>This ensures complete traceability of rate changes with a unique amendment reference.</li>
+        </ul>
+    </li>
+</ul>
+
+            <img src="img/RateCardDetails.png" alt="Rate Card Details">
+            <p>The Active Rates section provides a high-level overview and granular detail, enabling users to efficiently manage finalized rates and perform necessary amendments with complete traceability.</p>
+        </section>
+
+        <section id="draft-rates">
+            <h1>Draft Rates</h1>
+            <p>The Draft Rates section in the Rate Maintenance module is designed to facilitate the review, revision, and approval processes for draft lanes before finalization. This section provides users with powerful tools for filtering, viewing, and editing draft rates to meet operational needs. Below is a detailed breakdown of its features and functionalities:</p>
+            <img src="img/RM_draft.png" alt="Rate Maintenance Draft Main View">
+            
+            <h2>Table Overview:</h2>
+
+<ul>
+    <li><strong>Table Columns:</strong>
+        <ul>
+            <li>Contract ID: The unique identifier for the draft contract.</li>
+            <li>Carrier Code: Code of the carrier associated with the rate.</li>
+            <li>Status: Shows "Draft" status.</li>
+            <li>Valid From: Date when the rate becomes effective.</li>
+            <li>Valid To: Date when the rate expires.</li>
+            <li>Uploaded By: User who uploaded the rate.</li>
+            <li>Created On: Date when the contract was created.</li>
+            <li>Changed On: Date of the most recent modification.</li>
+        </ul>
+    </li>
+    <li><strong>Additional Columns Available:</strong> Users can access additional rate details through:
+        <ul>
+            <li>Version: Current version number for the rate.</li>
+            <li>OID: Object/rate identifier.</li>
+            <li>Remarks: Additional notes or special conditions.</li>
+            <li>Rate Header ID: Unique identifier for the rate header.</li>
+            <li>OFA Reference: Associated OFA reference number.</li>
+            <li>Valid</li>
+            <li>RFAInd: RFA (Request for Amendment) indicator.</li>
+            <li>Valid From: Rate effective date [Additional columns available through Column Chooser].</li>
+        </ul>
+    </li>
+</ul>
+
+	    <p>Each row represents a unique draft contract. To view lane-level details within a contract, users must click into the contract to access the detailed rate breakdown.</p>
+	    <img src="img/DR_Main.png" alt="Draft Rates Dashboard">
+            
+            <h2>Filter Tools:</h2>
+            <ul>
+                <li>
+                    <strong>Search Tab:</strong> Basic template and carrier filtering
+                </li>
+                <li>
+                    <strong>Advanced Search Tab:</strong> Enables advanced filtering capabilities
+                </li>
+		<li>
+		    Multiple filter options available including Origin Country, Origin City, Destination City, Commodity, and Service Level
+		</li>
+            </ul>
+            
+
+<h2>Action Buttons and Controls:</h2>
+<ul>
+    <li><strong>Rate Management Actions:</strong>
+        <ul>
+            <li><strong>Rate Card Details</strong> (Document Icon): Opens the Detailed Rate View for comprehensive viewing and editing of rate information. This includes origin, destination, base rates, surcharges, and charge breakdown.</li>
+            <li><strong>Simulate</strong> (Calculator Icon): Simulates rate changes and compares draft rates with active rates before committing to changes.</li>
+            <li><strong>Rollback</strong> (Undo Icon): Reverts the selected lane to its previous state if changes were made.</li>
+            <li><strong>Accept</strong> (Checkmark Icon): Approves the selected draft lane(s) as-is, moving them toward finalization.</li>
+            <li><strong>Reject</strong> (X Icon): Rejects the selected draft lane(s) if they do not meet expectations or contain errors.</li>
+            <li><strong>Upload</strong> (Cloud/Upload Icon): Upload updated or corrected rate files for specific lanes, useful for bulk corrections.</li>
+        </ul>
+    </li>
+    <li><strong>Bulk Operations:</strong> Select multiple lanes using checkboxes and perform actions (Accept, Reject, Upload) on all selected lanes simultaneously.</li>
+    <li><strong>Amendment Buttons:</strong>
+        <ul>
+            <li><strong>Partial Amendment:</strong> Creates an amendment for only the selected/modified lanes while keeping others in draft status.</li>
+            <li><strong>Full Amendment:</strong> Creates an amendment for all lanes in the draft, moving them all to active status simultaneously.</li>
+        </ul>
+    </li>
+</ul>           
+            <h2>Rate Card Details: Editing Lane Details</h2>
+            <img src="img/Draft_RateCard.png" alt="Draft Rate Card">
+            <p>Clicking the "Rate Card Details" Icon opens the Detailed Rate View, a dedicated interface for managing lane-specific details. This view offers enhanced functionality for shippers:</p>
+            <h3>Editable Fields:</h3>
+            <ul>
+                <li>The shipper can adjust base charges, fuel surcharges, and other cost-related parameters. Any changes made here are tracked in the lane history.</li>
+                <li>When a user modifies a lane, <span style="color: red; font-weight: bold;">changed values are automatically highlighted in red</span> to indicate updates.</li>
+                <li>This ensures that users can <strong>quickly identify modifications</strong> before submitting them for approval.</li>
+            </ul>
+            <h3>Actions Available:</h3>
+            <ul>
+                <li><strong>Reject:</strong> Decline the rate if it does not meet expectations.</li>
+                <li><strong>Approve:</strong> Approve the rate as proposed.</li>
+                <li><strong>Revise:</strong> Modify the rate to create a counter-offer and generate a unique OFA number for acceptance or rejection by the carrier.</li>
+            </ul>
+            <img src="img/raterevisionofa.png" alt="Rate Revision OFA">
+            
+            <h2>Amendment Process</h2>
+            <p>The Draft Rates section supports both Partial and Full Amendments to ensure flexibility and precision in rate finalization:</p>
+            <h3>Partial Amendments:</h3>
+            <ul>
+                <li>Shippers can accept only a subset of updated lanes. For example, if 10 lanes are submitted by the carrier, the shipper may accept 5 lanes, rejecting or revising the rest.</li>
+                <li>Revised lanes are sent back to the carrier for approval or rejection.</li>
+            </ul>
+            <h3>Full Amendments:</h3>
+            <ul>
+                <li>All updated lanes are accepted simultaneously, finalizing the entire contract.</li>
+            </ul>
+            <img src="img/amendments.png" alt="Amendment Screen">
+            <h2>Shipper and Carrier Responsibilities:</h2>
+            <h3>Shipper Actions:</h3>
+            <ul>
+                <li>Shippers can Reject, Accept, or Revise rates based on their requirements. Revising a rate generates a Partial Amendment for further carrier review.</li>
+            </ul>
+            <h3>Carrier Actions:</h3>
+            <ul>
+                <li>Carriers can only Accept or Reject counter-offers or amendment requests sent by the shipper.</li>
+            </ul>
+        </section> <!-- Closing tag for draft-rates section -->
+
+        
+<section id="rate-simulation">
+    <h3>Rate Simulation</h3>
+    <h4>Overview</h4>
+    <p>
+        The Rate Simulation feature within Rate Maintenance allows users to simulate and compare rates under different scenarios to analyze cost impacts before committing to changes.
+    </p>
+    <ul>
+        <li><strong>Draft Rates Simulation:</strong> Users can select specific lanes from draft rates to compare current rates with changed/updated rates, allowing analysis before acceptance or revision.</li>
+        <li><strong>Active Rates Simulation:</strong> Users can revise rates and simulate the difference between new proposed rates and currently active rates. If satisfied with the simulation results, the system automatically generates an Offer for Amendment (OFA).</li>
+    </ul>
+    <p>
+        This feature provides comprehensive cost analysis under different scenarios, enabling informed decision-making before rate changes are finalized.
+    </p>
+
+    <h4>Accessing Rate Simulation</h4>
+    <p>
+        To access the Rate Simulation feature:
+    </p>
+    <ul>
+        <li>Navigate to Rate Maintenance and select the appropriate status (Draft).</li>
+        <li>Click on a Contract ID to open the contract detail view. </li>
+        <li>Select any 'Draft Rate' & Click the "Simulate" button in the action buttons bar.</li>
+        <li>The Rate Simulation module will open with simulation options.</li>
+    </ul>
+
+    <h4>Step 1: Simulating Rates for Draft Templates</h4>
+    <p>
+        <strong>Description:</strong> Users access the Rate Simulation module by selecting a draft template. Within the draft template, specific lanes can be selected to view and compare current rates with updated or changed rates.
+    </p>
+    <p>
+        <strong>Key Process:</strong>
+    </p>
+    <ul>
+        <li>Select the draft template to simulate.</li>
+        <li>Choose specific lanes to include in the simulation.</li>
+        <li>Select a Currency (e.g., USD, EUR, GBP) for rate comparison and calculations.</li>
+        <li>Select a Shipment Profile (Low, Medium, or High):</li>
+        <ul>
+            <li>Low: 10 shipments/month</li>
+            <li>Medium: 100 shipments/month</li>
+            <li>High: 500 shipments/month</li>
+        </ul>
+        <li>Profiles ensure rate calculations reflect annual shipment charges.</li>
+        <li>Review the simulated cost comparison.</li>
+    </ul>
+    <img src="img/Step1_Simuate.png" alt="Step 1 Rate Simulate">
+
+    <h4>Step 2: Comparing Rates for Draft Templates</h4>
+    <p>
+        <strong>Description:</strong> Once lanes and shipment profiles are selected, the system displays a detailed rate comparison showing:
+    </p>
+    <ul>
+        <li>Draft rate charges displayed side-by-side with active rate charges.</li>
+        <li>Detailed breakdowns including base rates, fuel surcharges, handling fees, and other applicable charges.</li>
+        <li>Clear visualization of differences between draft and active rates.</li>
+        <li>Percentage or absolute value differences highlighted for quick analysis.</li>
+    </ul>
+	<div style="display: flex; gap: 10px;">
+            <img src="img/Step2_Simuate.png" alt="Step 2 Rate Simulate" style="width: 49%;">
+            <img src="img/Step3_Simuate.png" alt="Step 3 Rate Simulate" style="width: 49%;">
+	</div>
+
+    <h4>Step 3: Revising Rates for Active Templates</h4>
+    <p>
+        <strong>Description:</strong> For active rates, users can simulate changes by modifying:
+    </p>
+    <ul>
+        <li>Base rate amounts.</li>
+        <li>Fuel surcharge percentages or amounts.</li>
+        <li>Handling charges and other cost parameters.</li>
+        <li>Additional service-related charges.</li>
+    </ul>
+    <p>
+        Like draft simulations, select shipment profiles to reflect monthly shipment volumes and calculate annual charges. Revised rates are then compared to currently active rates to understand the impact of proposed changes.
+    </p>
+    <img src="img/Step4_Simuate.png" alt="Step 4 Rate Simulate">
+
+    <h4>Step 4: Simulating and Comparing Active Rates</h4>
+    <p>
+        <strong>Description:</strong> After proposing rate revisions, the system generates a detailed comparison showing:
+    </p>
+    <ul>
+        <li>Simulated/revised rates vs. current active rates.</li>
+        <li>Complete charge breakdown for side-by-side analysis.</li>
+        <li>Cost variations and differences highlighted.</li>
+        <li>Total annual impact analysis based on selected shipment profile.</li>
+    </ul>
+    <img src="img/Step5_Simuate.png" alt="Step 5 Rate Simulate">
+
+    <h4>Step 5: Accepting the Simulation and Creating an OFA</h4>
+    <p>
+        <strong>Description:</strong> Once satisfied with the simulation results:
+    </p>
+    <ul>
+        <li>Users can accept the revised rates.</li>
+        <li>Upon acceptance, the system automatically generates an Offer for Amendment (OFA).</li>
+        <li>The OFA contains all revised rates for carrier review and approval.</li>
+        <li>The OFA reference number is generated for tracking the amendment through the workflow.</li>
+        <li>Users can then proceed with the OFA submission process for carrier negotiation.</li>
+    </ul>
+    <img src="img/Step6_Simuate.png" alt="Step 6 Rate Simulate">
+</section>
+
+        
+        <section id="uploading-rates">
+            <h1>Rate Upload</h1>
+            <p>The Bulk Upload functionality in Rate Maintenance allows users to upload multiple rates simultaneously, streamlining the process of updating rate data for Air, Ocean, and Road shipments. Using standardized templates, users can efficiently input large amounts of data, minimizing manual entry errors.</p>
+            <h3>Steps for Bulk Upload</h3>
+            <ul>
+                <li><strong>Access the Rate Maintenance Module:</strong> Navigate to RateCube and select Rate Maintenance from the sidebar.</li>
+                <li><strong>Choose Template:</strong> Select the required template for the upload from the dropdown menu (e.g., NA, GT_Air, or GT Ocean).</li>
+                <li><strong>Prepare the File:</strong> Populate the Excel or CSV template with the rates to be uploaded, ensuring all required fields are complete.</li>
+                <li><strong>Upload the File:</strong> Click the <strong>Submit</strong> button for processing.</li>
+                <li><strong>Submit the file for processing.</strong></li>
+                <ul>
+                    <li>Several carriers will be detected even if the shipper uploads one file.</li>
+                </ul>
+                <li><strong>Validate and Review:</strong> Verify and Confirm the Rate Upload summary:</li>
+                <ul>
+                    <li>When the Rate file uploads successfully, you will receive a message saying that "The files have been uploaded successfully"</li>
+                </ul>
+            </ul>
+	<div style="display: flex; gap: 10px;">
+            <img src="img/ratefileupload.png" alt="Bulk Upload" style="width: 49%;">
+            <img src="img/confirmbulkupload.png" alt="Confirm Bulk Upload" style="width: 49%;">
+	</div>
+        </section>
+        
+    
+
+        <section id="ofa-rfa-processes">
+            <h2>OFA and RFA Processes in Rate Maintenance</h2>
+            <p>The OFA and RFA processes play a critical role in managing rate amendments between carriers and shippers. Below is a detailed guide to these processes, including actions, notifications, and key indicators.</p>
+            <img src="img/ofa.png" alt="OFA Process Diagram">
+    
+            <h3>Offer for Amendment (OFA)</h3>
+            <h4>Process Overview:</h4>
+            <ol>
+                <li><strong>Initiation:</strong> A carrier uploads an OFA, and a unique reference number is generated for tracking.</li>
+                <li><strong>Shipper Notification:</strong> A task is created, and an email notification is sent to the shipper.</li>
+                <li><strong>Shipper Actions:</strong>
+                    <ul>
+                        <li><strong>Approval:</strong> The shipper can approve the OFA, creating a Full Amendment.</li>
+                        <li><strong>Counteroffer:</strong> The shipper can counter the OFA, requesting revised rates.</li>
+                    </ul>
+                </li>
+                <li><strong>Final Steps:</strong>
+                    <ul>
+                        <li>The carrier can accept the counteroffer or upload revised rates based on the shipper's request.</li>
+                    </ul>
+                </li>
+            </ol>
+            <h4>Key Indicators for Actions:</h4>
+            <ul>
+                <li>Actions taken by shippers are marked with an <strong>S</strong> indicator, while carrier actions are denoted by a <strong>C</strong>.</li>
+                <li>Different colors represent various statuses:
+                    <ul>
+                        <li><strong>Blue:</strong> Request for Amendment (RFA)</li>
+                        <li><strong>Orange:</strong> Offer for Amendment (OFA)</li>
+                        <li><strong>Green:</strong> Accepted</li>
+                        <li><strong>Yellow:</strong> Awaiting Approval</li>
+                        <li><strong>Red:</strong> Rejected</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Request for Amendment (RFA)</h3>
+            <h4>Process Overview:</h4>
+            <ol>
+                <li><strong>Initiation:</strong> The shipper changes rates and sends an RFA to the carrier.</li>
+                <li><strong>Carrier Notification:</strong> An email notification is sent to the carrier for review.</li>
+                <li><strong>Carrier Actions:</strong>
+                    <ul>
+                        <li><strong>Acceptance:</strong> The carrier can accept the RFA.</li>
+                        <li><strong>Upload Revised Rates:</strong> The carrier can upload new rates if changes are required.</li>
+                    </ul>
+                </li>
+            </ol>
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Similar to the OFA, the RFA process uses indicators and colors to reflect the status of actions on the platform.</li>
+            </ul>
+            <section id="ofa-rfa-processes">
+                <h3>Steps to Create and Process OFA</h3>
+                    <h4>Scenario 1: Full Counter OFA Acceptance Process</h4>
+                    <p>This process involves:</p>
+                    
+                    <h5>Step 1: Initiate the OFA Process</h5>
+                    <p>The process begins when the carrier initiates the OFA by selecting the relevant contract ID. This step ensures the correct contract is identified for amendments. Once selected, the carrier prepares to identify specific rates for amendment.</p>
+                    <img src="img/fullofa1.png" alt="Initiate OFA Process">
+                    
+                    <h5>Step 2: Select and Export Rates for Amendment</h5>
+                    <p>The carrier filters and selects the specific rates that require amendments. This can be done based on criteria such as contract validity, service levels, or origin/destination cities. After selecting the applicable rates, the carrier exports the data to make modifications offline.</p>
+                    <img src="img/fullofa2.png" alt="Select and Export Rates">
+                    
+                    <h5>Step 3: Update and Upload Amended Rates</h5>
+                    <p>The carrier updates the exported file with the necessary amendments, such as rate changes or additions. The amended file is then uploaded back into the system by selecting the appropriate template, validity period, and rate file. A popup message confirms the successful upload of the amended rates.</p>
+                    <img src="img/fullofa3.png" alt="Upload Amended Rates">
+                    
+                    <h5>Step 4: Shipper Reviews and Counters</h5>
+                    <p>Once the amended rates are uploaded, they become available to the shipper for review. Each amended rate is associated with a unique Reference ID, ensuring traceability. The shipper has the option to counter specific rates or accept them as-is. Countering involves proposing alternate rates and saving them for the carrier to review.</p>
+                    <img src="img/fullofa4.png" alt="Shipper Reviews and Counters">
+                    
+                    <h5>Step 5: Carrier Accepts or Rejects Countered OFA</h5>
+                    <p>The carrier reviews the countered OFA rates provided by the shipper, including any modifications or alternate proposals. After reviewing, the carrier decides whether to accept or reject the countered rates. If accepted, the system updates the rate status, reflecting the carrier’s decision.</p>
+                    <div style="display: flex; gap: 10px;">
+                        <img src="img/fullofa5.png" alt="Carrier Reviews Countered OFA" style="width: 49%;">
+                        <img src="img/fullofa6.png" alt="Carrier Accepts Countered OFA" style="width: 49%;">
+                    </div>
+                    
+                    <h5>Step 6: Final Acceptance and Activation</h5>
+                    <p>After the carrier’s acceptance, the shipper performs a final review and accepts the updated rates using the Full Amendment option on the bottom right-hand section of the dashboard. Once this step is completed, the amended rates are activated and appear under the "Active Rates" section with the amendment reference ID.</p>
+		    <div style="display: flex; gap: 10px;">
+                    <img src="img/fullofa7.png" alt="Final Acceptance and Activation" style="width: 49%;">
+		    <img src="img/fullofa8.png" alt="Final Acceptance and Activation" style="width: 49%;">
+		    </div>
+                </section>
+                
+                <section id="ofa-rfa-processes">
+                    <h4>Scenario 2: Revised OFA After Counter Rejection</h4>
+                    <p>This process is initiated when:</p>
+                    <ul>
+                        <li>The carrier rejects the shipper’s countered OFA, identifying the need for revised amendments.</li>
+                        <li>The carrier must upload new rates, which are subject to a second review and acceptance by the shipper.</li>
+                        <li>The scenario ends with the activation of the amended rates after mutual agreement.</li>
+                    </ul>
+                    
+                    <h5>Step 1: Initiate the OFA Process</h5>
+                    <p>The carrier selects the contract ID for which the OFA is being initiated and identifies the records requiring amendments. The selected records are exported to facilitate offline modifications.</p>
+                    <img src="img/revisedofa1.png" alt="Initiate the OFA Process">
+                    
+                    <h5>Step 2: Upload Amended Rates</h5>
+                    <p>The carrier uploads the amended rates file using the upload function. Upon successful upload, a popup confirms that the file has been uploaded successfully. This ensures that the new rates are compatible and ready for further review.</p>
+                    <img src="img/revisedofa2_1.png" alt="Upload Amended Rates">
+		    <img src="img/revisedofa2_2.png" alt="Upload Amended Rates">
+                    <img src="img/revisedofa2_3.png" alt="Upload Amended Rates">
+                    
+                    <h5>Step 3: Update Draft Status</h5>
+                    <p>The system updates the OFA records with a "DRAFT" status after the amended rates are uploaded. A unique ID is assigned to each record to track changes during the amendment process.</p>
+                    <img src="img/revisedofa3.png" alt="Update Draft Status">
+                    
+                    <h5>Step 4: Shipper Reviews and Updates Counter</h5>
+                    <p>The shipper receives the updated OFA and reviews it. They update the counter OFA if needed, involving two steps: requesting amendments and revising the proposal. These updates are sent back to the carrier for further review.</p>
+                    <img src="img/revisedofa4.png" alt="Shipper Reviews and Updates Counter">
+                    
+                    <h5>Step 5: Carrier Rejects Countered OFA</h5>
+                    <p>The carrier reviews the countered OFA provided by the shipper and chooses to reject the proposed rates. A rejection popup is displayed, and the status of the OFA is updated to reflect the rejection.</p>
+                    <img src="img/revisedofa5.png" alt="Carrier Rejects Countered OFA">
+                    
+                    <h5>Step 6: Export and Submit New Rates</h5>
+                    <p>The carrier exports the rejected OFA records and prepares new rates in response to the shipper’s counter. The updated rates file is uploaded, and the OFA is submitted for approval by the shipper.</p>
+                    <div style="display: flex; gap: 10px;">
+                        <img src="img/revisedofa6.png" alt="Export Rejected OFA" style="width: 49%;">
+                        <img src="img/revisedofa7.png" alt="Submit New Rates" style="width: 49%;">
+                    </div>
+			<img src="img/revisedofa7_1.png" alt="Submit Bulk Upload">
+                    
+                    <h5>Step 7: Shipper Final Review and Activation</h5>
+                    <p>The shipper performs a final review of the revised OFA and accepts it. During this step, the system transitions the status of the revised OFA records from brown (Offer for Amendment) to green (Accepted) to indicate successful acceptance. A popup message confirms this action, ensuring the shipper acknowledges the updated rates. The shipper then activates the rates using the "FULL AMENDMENT" option on the Rate Maintenance dashboard.</p>
+                    <div style="display: flex; gap: 10px;">
+                        <img src="img/revisedofa8.png" alt="Shipper Accepts Revised OFA" style="width: 49%;">
+                        <img src="img/revisedofa9.png" alt="Activate Rates with Full Amendment" style="width: 49%;">
+                    </div>
+                    
+                    <h5>Step 8: Rates Become Active</h5>
+                    <p>The newly activated rates appear under the "Active Rates" section in the system. These rates are referenced by the most recent OFA amendment ID, completing the process.</p>
+                    <img src="img/revisedofa10.png" alt="Rates Become Active">
+                </section>
+                
+                <section id="ofa-rfa-processes">
+                    <h4>Scenario 3: Partial OFA Acceptance and Counter</h4>
+                    <p>This process is initiated when:</p>
+                    <ul>
+                        <li>The carrier uploads the OFA, and a unique reference number is generated for the OFA.</li>
+                        <li>The shipper accepts part of the OFA while countering the remaining lanes.</li>
+                        <li>Based on the shipper's actions, one or two amendments are created:
+                            <ul>
+                                <li>One amendment for accepted lanes if the shipper processes a partial amendment.</li>
+                                <li>Another amendment for the countered lanes.</li>
+                            </ul>
+                        </li>
+                        <li>The carrier receives and accepts the counter partial OFA, completing the process.</li>
+                    </ul>
+                
+                    <h5>Step 1: Initiate the OFA Process</h5>
+                    <p>The carrier begins the OFA process by selecting and exporting the records requiring amendments. These records can also be manually updated within the system. The system generates a unique reference number for the OFA.</p>
+                    
+                    <h5>Step 2: Draft Status Update</h5>
+                    <p>After the OFA upload, the contract receives a "DRAFT" status. Each OFA line is updated with a unique OFA reference and record ID, ensuring traceability for the amendment process.</p>
+                    <img src="img/revisedofa2_1.1.png" alt="Upload Amended Rates">
+		    <img src="img/revisedofa2_2.1.png" alt="Upload Amended Rates">
+                
+                    <h5>Step 3: Shipper Receives and Processes the OFA</h5>
+                    <p>The shipper reviews the OFA and accepts part of the lanes. For the accepted lanes, the shipper creates a partial amendment, generating a unique reference number. For the remaining lanes, the shipper counters by proposing alternate rates and saving them for the carrier’s review.</p>
+                    <img src="img/partialofa3.png" alt="Shipper Processes the OFA">
+		    <img src="img/partialofa3.1.png" alt="Partial Amendment Created">
+                
+                    <h5>Step 4: Shipper Creates Partial Amendment</h5>
+                    <p>The shipper creates a partial amendment for the accepted lanes. The system generates a unique amendment reference for these accepted lanes while retaining the original OFA reference for the countered lanes. The partial amendment gets an active status for the accepted lanes.</p>
+                    <img src="img/partialofa4.png" alt="Partial Amendment Created">
+		    <img src="img/partialofa4.1.png" alt="Partial Amendment Created">
+                
+                    <h5>Step 5: Carrier Reviews and Accepts Counter Partial OFA</h5>
+                    <p>The carrier reviews the countered lanes submitted by the shipper. Upon accepting the counter, the system updates the status of the counter partial OFA to reflect the carrier’s decision.</p>
+                    <img src="img/partialofa5.png" alt="Carrier Accepts Counter Partial OFA">
+                
+                    <h5>Step 6: Shipper Finalizes and Activates Rates</h5>
+                    <p>The shipper approves the counter partial OFA and amends the contract using the partial amendment option. A popup confirms the successful activation of the amended contract, and the rates transition to "Active" status in the system.</p>
+                    <img src="img/partialofa6.png" alt="Finalizes and Activates Rates">
+                </section>
+
+                <section id="ofa-rfa-processes">
+                    <h4>Scenario 4: Revised OFA and Partial Counter Rejection</h4>
+                    <h5>Overview</h5>
+                    <p>This process is initiated when:</p>
+                    <ul>
+                        <li>The carrier uploads an OFA, generating a unique reference number.</li>
+                        <li>The shipper receives the OFA, accepts part of it, and counters the remaining lanes.</li>
+                        <li>The shipper creates amendments for accepted lanes, leading to one or more amendments.</li>
+                        <li>The carrier rejects the RFA and uploads revised rates for shipper review.</li>
+                        <li>The shipper accepts the revised OFA, finalizing the process.</li>
+                    </ul>
+                
+                    <h5>Step 1: Initiate the OFA Process</h5>
+                    <p>The carrier starts by selecting the relevant contract ID for the OFA. Records are identified for amendments and exported for offline modification. The system generates a unique reference number for the OFA.</p>
+                    <img src="img/revisedpartialofa1.png" alt="Initiate the OFA Process">
+                
+                    <h5>Step 2: Upload Amended Rates</h5>
+                    <p>The carrier uploads the OFA, which includes new rates, and a unique reference number is generated. A popup confirms the successful upload of the amended rates.</p>
+                    <img src="img/revisedpartialofa2.png" alt="Upload Amended Rates">
+		    <img src="img/revisedpartialofa2_1.png" alt="Upload Amended Rates">		    
+                
+                    <h5>Step 3: Draft Status Update</h5>
+                    <p>The OFA records are updated with a "DRAFT" status. Each line receives a unique OFA reference and record ID for tracking throughout the amendment process.</p>
+                    <img src="img/revisedpartialofa3.png" alt="Draft Status Update">
+                
+                    <h5>Step 4: Shipper Receives and Processes the OFA</h5>
+                    <p>The shipper reviews the OFA, accepts certain lanes, and counters the remaining ones. For accepted lanes, the system updates them with an "Accepted" status. For countered lanes, the original OFA reference is retained for further carrier review. A green popup message will appear once selected lanes are approved.</p>
+                    <img src="img/revisedpartialofa4.png" alt="Shipper Receives and Processes the OFA">
+                
+                    <h5>Step 5: Shipper Creates Partial Amendment</h5>
+                    <p>The shipper creates a partial amendment for accepted lanes. This results in a unique amendment reference ID for the accepted lanes while retaining the original OFA reference for countered lanes. The partial amendment gets an active status for the accepted lanes.</p>
+                    <img src="img/revisedpartialofa5.png" alt="Shipper Creates Partial Amendment">
+                    <img src="img/revisedpartialofa5_1.png" alt="Shipper Creates Partial Amendment 2">
+
+                    <h5>Step 6: Carrier Rejects Counter Partial OFA</h5>
+                    <p>The carrier reviews the counter partial OFA and rejects the shipper’s counter proposal. The system reflects this action with a rejection status and a confirmation popup message.</p>
+                    <img src="img/revisedpartialofa6.png" alt="Carrier Rejects Counter Partial OFA">
+		    <img src="img/revisedpartialofa6_1.png" alt="Carrier Rejects Counter Partial OFA 2">
+                
+                    <h5>Step 7: Shipper Accepts and Finalizes Revised OFA</h5>
+                    <p>The shipper reviews the revised OFA. Once accepted, the counter proposal transitions into the "Accepted" status. The system confirms the acceptance with a popup message, reflecting the successful acknowledgment of the revised rates.</p>
+                    <img src="img/revisedpartialofa7.png" alt="Shipper Accepts and Finalizes Revised OFA">
+                
+                    <h5>Step 8: Shipper Activates Revised Rates</h5>
+                    <p>The shipper finalizes the accepted counter OFA using the partial amendment option. This activates the updated contract. A confirmation popup is displayed, showing the successful activation of the contract amendment, which is now visible in the system in "Active Rates."</p>
+                    <img src="img/revisedpartialofa8.png" alt="Shipper Activates Revised Rates">
+		    <img src="img/revisedpartialofa8_1.png" alt="Shipper Activates Revised Rates">
+                </section>
+
+                <section id="ofa-rfa-processes">
+
+<section>
+    <h3>Amendment Reports</h3>
+    
+    <h4>Overview</h4>
+    <p>
+        The Amendment Reports section in RateCube allows users to visualize, analyze, and manage 
+        linked amendments and the underlying Offer for Amendments (OFAs) and associated changes. 
+        This feature provides critical insights into the contract amendment hierarchy and lane-level 
+        details, aiding in accurate decision-making and traceability.
+    </p>
+    
+    <h4>When to Use Amendment Reports</h4>
+    <ul>
+        <li>At any point when a user needs to review amendments linked to specific contracts or carriers.</li>
+        <li>To understand the history and details of underlying OFAs for decision-making.</li>
+        <li>To filter and navigate the contract hierarchy based on various parameters such as template name, carrier, contract ID, rate ID, lane ID, status, and amendment date range.</li>
+    </ul>
+
+    <h5>1. Accessing the Amendment Report Module</h5>
+    <p>
+        Users can access the Amendment Report module directly from the Amendment Report Menu in the left sidebar. 
+        This provides a starting point for viewing amendment details and filtering data.
+    </p>
+    <img src="img/amendmentreport1.png" alt="Amendment Report 1">
+
+    <h5>2. Filtering Amendments</h5>
+    <p>
+        Users can filter amendments using various criteria through two search modes: 
+        <strong>Search</strong> (basic filters) and <strong>Advanced Search</strong> (detailed filters). 
+        This flexibility ensures that users can narrow their focus to specific data points as needed.
+    </p>
+
+    <h5>Search Tab Filters:</h5>
+    <ul>
+        <li><strong>Template Name</strong> (Required): Select the rate template to filter amendments by template type (e.g., GT_Air, NA, GT Ocean).</li>
+        <li><strong>Carrier</strong> (Optional): Narrow down results based on the carrier handling the OFAs.</li>
+        <li><strong>Contract ID</strong> (Optional): Review specific contracts linked to amendments by entering the contract identifier.</li>
+        <li><strong>Status</strong> (Optional): Filter amendments by status. Available options include New, Updated, and Expired amendments.</li>
+        <li><strong>Amendment Date Range</strong> (Required): Focus on amendments made within a particular timeframe. Select start and end dates using the date picker.</li>
+    </ul>
+
+    <h5>Advanced Search Tab Filters:</h5>
+    <p>
+        For more granular searches, use the Advanced Search tab to filter by specific rate and lane identifiers:
+    </p>
+    <ul>
+        <li><strong>Rate ID</strong> (Optional): Filter amendments by specific Rate Cube identifier to find amendments related to a particular rate.</li>
+        <li><strong>Lane ID</strong> (Optional): Filter amendments by specific lane identifier to locate amendments for particular shipping lanes.</li>
+    </ul>
+
+    <p>
+        <strong>Note:</strong> At minimum, you must select a Template Name and Amendment Date Range to perform a search. 
+        Additional filters can be combined to narrow results further.
+    </p>
+    <img src="img/amendmentreport2.png" alt="Amendment Report 2">
+
+    <h5>3. Viewing Contract Hierarchy</h5>
+    <p>
+        After performing a search, the system displays a list of contract hierarchies within the Amendment Report table. 
+        Each row represents a specific contract with its amendment details.
+    </p>
+
+    <h5>Key Details:</h5>
+    <ul>
+        <li><strong>Contract ID:</strong> The unique identifier for the contract.</li>
+        <li><strong>Version:</strong> The current version number of the amendment.</li>
+        <li><strong>Created On:</strong> The date and time when the amendment was created.</li>
+        <li><strong>Created By:</strong> The user who created the amendment.</li>
+    </ul>
+
+    <p>
+        These columns provide a high-level overview of amendments. Click on a Contract ID row to view underlying lane details 
+        and additional information about the amendment.
+    </p>
+    <img src="img/amendmentreport3.png" alt="Amendment Report 3">
+
+    <h5>4. Viewing Underlying Lanes</h5>
+    <p>
+        When a user clicks on a contract row in the Amendment Report table, the system displays the underlying 
+        lane details in expanded format. This view provides granular information about each lane associated with 
+        the amendment, including:
+    </p>
+    <ul>
+        <li><strong>Lane ID:</strong> The unique identifier for the lane.</li>
+        <li><strong>Origin and Destination Cities:</strong> Indicates the shipment path (e.g., New York to Los Angeles).</li>
+        <li><strong>Origin Service:</strong> The service type at the origin location.</li>
+        <li><strong>Destination Service:</strong> The service type at the destination location.</li>
+        <li><strong>Service Level:</strong> Shows the type of service applied to the amendment (e.g., Express, Standard).</li>
+        <li><strong>Customer Type:</strong> Indicates whether the shipment is commercial, residential, or other types.</li>
+        <li><strong>Rate Information:</strong> Displays base rates, surcharges, and other charge details for the lane.</li>
+        <li><strong>Other Details:</strong> Additional columns such as commodity type, container type, and weight breaks for further insights.</li>
+    </ul>
+    <img src="img/amendmentreport4.png" alt="Amendment Report 4">
+
+    <h5>5. Status Indicators Legend</h5>
+    <p>
+        The Amendment Report uses color-coded status indicators to quickly identify the state of amendments:
+    </p>
+    <ul>
+        <li><span style="color: green;">■</span> <strong>New (Green):</strong> Recently created amendments that have not yet been processed.</li>
+        <li><span style="color: orange;">■</span> <strong>Updated (Orange):</strong> Amendments that have been modified or are currently being processed.</li>
+        <li><span style="color: red;">■</span> <strong>Expired (Red):</strong> Amendments that have expired or are no longer active.</li>
+    </ul>
+    <p>
+        The legend appears at the bottom of the Amendment Report table for quick reference.
+    </p>
+</section>
+
+
+      
+<section id="task-visualization">
+    <h3>Task Visualization</h3>
+    <h4>Overview</h4>
+    <p>
+        The Task Visualization feature in the Rate Maintenance module enables users to create, manage, and assign tasks related to specific contract lanes. This functionality streamlines communication between shippers and carriers by allowing comments, file uploads, and task tracking within the system. Tasks can be assigned to a carrier user with email notifications sent to alert them.
+    </p>
+    
+    <h5>Step 1: Navigating to the Active Template</h5>
+    <p><strong>Description:</strong></p>
+    <ul>
+        <li>Navigate to the Rate Maintenance module and select a template with an Active status. This is the first step to access any specific contract ID for which a task needs to be created.</li>
+        <li>Use the displayed table to select relevant contract IDs or lanes.</li>
+    </ul>
+    <img src="img/taskviz1.png" alt="Task Visualization 1">
+    
+    <h5>Step 2: Selecting a Lane and Creating a Task</h5>
+    <p><strong>Description:</strong></p>
+    <ul>
+        <li>Select a specific lane from the table to work on.</li>
+        <li>Click on the <strong>Create Task</strong> button to initiate a task related to the selected lane.</li>
+        <li>This functionality allows the shipper to target specific lanes for updates or comments.</li>
+    </ul>
+    <img src="img/taskviz2.png" alt="Task Visualization 2">
+    
+    <h5>Step 3: Adding Comments and Uploading Questionnaire</h5>
+    <p><strong>Description:</strong></p>
+    <ul>
+        <li>After clicking on <strong>Create Task</strong>, a task creation pop-up appears.</li>
+        <li>The shipper can:
+            <ul>
+                <li>Add comments to provide specific instructions or details.</li>
+                <li>Upload a questionnaire file in CSV format for additional data input or queries.</li>
+                <li>Assign the task to the respective carrier user from the dropdown menu.</li>
+            </ul>
+        </li>
+        <li>Once completed, click <strong>Save</strong> to finalize the task creation.</li>
+    </ul>
+    <img src="img/taskviz3.png" alt="Task Visualization 3">
+    
+    <h5>Step 4: Task Details and Email Notification</h5>
+    <p><strong>Description:</strong></p>
+    <ul>
+        <li>Once the task is saved, the system sends an email alert to the assigned carrier user.</li>
+        <li>The created task can be reviewed in the <strong>Opened Task Details</strong> section.</li>
+        <li>This view includes:
+            <ul>
+                <li>Comments entered by the shipper during task creation.</li>
+                <li>Lane-specific details such as commodity type, origin, and destination locations.</li>
+                <li>Assigned users can update the task status or respond to comments as needed.</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="img/taskviz4.png" alt="Task Visualization 4">
+
+    <!-- Additional Info Section -->
+    <h4>Task Status Management - Additional Info</h4>
+    <h5>Task Statuses:</h5>
+    <ul>
+        <li><strong>Open:</strong> Task has been created and assigned but not yet started.</li>
+        <li><strong>In Progress:</strong> Assigned user is actively working on the task.</li>
+        <li><strong>Pending Carrier Response:</strong> Waiting for carrier feedback or action.</li>
+        <li><strong>Resolved:</strong> Task has been completed.</li>
+        <li><strong>Closed:</strong> Task is archived.</li>
+    </ul>
+
+    <h5>Best Practices:</h5>
+    <ul>
+        <li>Keep task descriptions clear and specific to the lane.</li>
+        <li>Attach relevant files (questionnaires, specifications) when needed.</li>
+        <li>Include deadline information in task comments if urgent.</li>
+        <li>Track task history for compliance and audit purposes.</li>
+        <li>Use task comments for back-and-forth communication rather than emails.</li>
+    </ul>
+
+    <h5>Integration with Amendment Process:</h5>
+    <p>Tasks can be created at any stage of the rate amendment process:</p>
+    <ul>
+        <li>During draft rate review to request carrier clarification.</li>
+        <li>Before OFA submission to gather missing information.</li>
+        <li>During partial amendment scenarios to coordinate on disputed lanes.</li>
+        <li>For follow-up actions after rate acceptance.</li>
+    </ul>
+</section>
+
+
+        <section id="unit-change-report">
+        
+            <h2>Unit Change Report</h2>
+            <p>
+                The <strong>Unit Change Report</strong> in RateCube is designed to help users quickly identify if any unit or currency has changed in the rate card.
+                This report is crucial for detecting modifications in **unit of measurement (UOM) or currency values, ensuring that any unintended changes are caught before they impact financial calculations.
+            </p>
+        
+            <h3>Purpose of the Unit Change Report</h3>
+            <ul>
+                <li>🔹 Tracks unit-based modifications** such as changes from <strong>grams (gm) to kilograms (kg)</strong> or **currency updates.</li>
+                <li>🔹 Ensures that carriers do not make unintentional unit shifts, which could lead to significant cost discrepancies.</li>
+                <li>🔹 Provides a clear side-by-side comparison** of previous and modified values, helping users audit rate changes effectively.</li>
+            </ul>
+        
+            <h3>How to Use the Unit Change Report</h3>
+        
+            <h4>1. Access the Unit Change Report</h4>
+            <p>
+                Navigate to the <strong>Unit Change Report</strong> from the <strong>OFA and RFA Processes</strong> menu.
+                This will open the report screen displaying relevant contracts and rate amendments.
+            </p>
+            <img src="img/unitchange1.png" alt="Accessing Unit Change Report">
+        
+            <h4>2. Reviewing Unit and Currency Modifications</h4>
+            <p>
+                The report highlights any changes in unit or currency fields. Users can see the before-and-after values, making it easier to detect shifts.
+                For example:
+            </p>
+            <ul>
+                <li>If a carrier updates a rate from grams (gm) to kilograms (kg) but forgets to adjust the value, it could result in a major difference in cost.</li>
+                <li>Similarly, a currency change from USD to EUR without correct conversion can cause incorrect invoicing.</li>
+            </ul>
+            <img src="img/unitchange2.png" alt="Unit and Currency Modifications">
+        
+            <h4>3. Applying Filters</h4>
+            <p>
+                Users can **filter the report** based on:
+            </p>
+            <ul>
+                <li><strong>Template Selection:</strong> Choose a specific rate template.</li>
+                <li><strong>Date Range:</strong> Select the period for which changes need to be reviewed.</li>
+                <li><strong>Unit Type or Currency:</strong> Narrow down changes to specific unit modifications.</li>
+            </ul>
+            <img src="img/unitchange3.png" alt="Filtering Unit Change Report">
+        
+            <h4>4. Identifying Critical Discrepancies</h4>
+            <p>
+                Any modifications in unit fields or currency values are <strong>highlighted in red</strong>.
+                This allows users to **quickly identify** discrepancies before finalizing contract amendments.
+            </p>
+            <img src="img/unitchange4.png" alt="Identifying Changes in Red">
+        
+            <h3>Key Benefits of the Unit Change Report</h3>
+            <ul>
+                <li>✅ <strong>Prevents costly errors</strong> by flagging unit or currency mismatches.</li>
+                <li>✅ <strong>Enhances visibility</strong> by clearly marking changes in red.</li>
+                <li>✅ <strong>Ensures data accuracy</strong> when revising rate cards and OFA amendments.</li>
+            </ul>      
+        </section>
+          
+<section id="troubleshooting">
+    <h2>Troubleshooting Section</h2>
+    <p>This troubleshooting guide addresses common issues encountered in the Rate Maintenance dashboard and provides detailed solutions based on real-world scenarios documented in the provided materials. It focuses on error handling, ensuring seamless rate uploads, validations, and contract amendments.</p>
+
+    <h3>1. File Upload Issues</h3>
+    <p><strong>Problem:</strong> File upload fails or results in an error message.</p>
+    <p><strong>Potential Causes:</strong></p>
+    <ul>
+        <li>File format mismatch (e.g., using .xlsx instead of .csv).</li>
+        <li>Incorrect template selection (e.g., NA template for GT_Air rates).</li>
+        <li>Missing mandatory fields in the rate file.</li>
+    </ul>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li><strong>Verify Template Compatibility:</strong> Ensure the template corresponds to the rate type (e.g., GT_Air, NA).</li>
+        <li><strong>Check Mandatory Fields:</strong> Validate that required columns like Carrier, Rate, Validity Period, and Service Level are populated.</li>
+        <li><strong>Correct File Format:</strong> Convert the file to .csv or .xlsx as required.</li>
+        <li><strong>Retry Upload:</strong> Use the Upload button in the dashboard, select the correct file, and re-submit.</li>
+        <li><strong>Review Validation Summary:</strong> Analyze error logs generated by the system, correct errors, and re-upload.</li>
+    </ul>
+
+    <h3>2. Data Validation Errors</h3>
+    <p><strong>Problem:</strong> Uploaded file passes initial checks but fails validation for specific rows.</p>
+    <p><strong>Potential Causes:</strong></p>
+    <ul>
+        <li>Overlapping validity dates for the same carrier or lane.</li>
+        <li>Invalid data types in fields (e.g., text in numeric fields).</li>
+        <li>Conflicts with existing rates or templates.</li>
+    </ul>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li><strong>Review Validation Summary:</strong> After upload, check the detailed error log generated by RateCube.</li>
+        <li><strong>Correct Errors:</strong> Open the original file, locate highlighted rows, and address specific issues.</li>
+        <li><strong>Common Fixes:</strong> Adjust conflicting validity dates, ensure numeric fields (e.g., Rate) contain only numbers.</li>
+        <li><strong>Re-Upload:</strong> Once corrected, re-submit the file.</li>
+    </ul>
+
+    <h3>3. Amendment Errors</h3>
+    <p><strong>Problem:</strong> Errors occur during Partial or Full Amendment processes.</p>
+    <p><strong>Potential Causes:</strong></p>
+    <ul>
+        <li>Invalid updates to mandatory fields (e.g., leaving the Base Rate blank).</li>
+        <li>Conflicting changes between Partial and Full Amendment actions.</li>
+    </ul>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li><strong>Full Amendment Fix:</strong> Ensure all fields are filled accurately before submitting.</li>
+        <li><strong>Review amendment messages:</strong> Confirm success messages like "Amendment Successful".</li>
+        <li><strong>Partial Amendment Fix:</strong> Select specific rows or lanes, verify edits, and confirm changes.</li>
+        <li><strong>Validation Post-Amendment:</strong> Use the Review button to confirm data integrity before final submission.</li>
+    </ul>
+
+    <h3>4. Export and Advanced Search Issues</h3>
+    <p><strong>Problem:</strong> Exported files are incomplete, or Advanced Search fails to display results.</p>
+    <p><strong>Potential Causes:</strong></p>
+    <ul>
+        <li>Filters applied incorrectly or in conflict.</li>
+        <li>Large datasets causing performance lags.</li>
+    </ul>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li><strong>Reset Filters:</strong> Clear all filters and reapply specific search criteria.</li>
+        <li><strong>Refine Search:</strong> Use targeted attributes (e.g., Contract ID, Carrier, Validity Period).</li>
+        <li><strong>Export Smaller Batches:</strong> Apply filters to narrow data before exporting.</li>
+        <li><strong>Browser Settings:</strong> Enable pop-ups and allow downloads from RateCube.</li>
+    </ul>
+
+    <h3>5. Contract Lane Management Errors</h3>
+    <p><strong>Problem:</strong> Errors appear when managing contract lanes (e.g., Accept, Reject, Revise).</p>
+    <p><strong>Potential Causes:</strong></p>
+    <ul>
+        <li>Missing required updates for rejected lanes.</li>
+        <li>Invalid data entry during revision.</li>
+    </ul>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li><strong>Lane Rejection:</strong> For rejected lanes, ensure valid corrections are made before clicking Revise.</li>
+        <li><strong>Revision and Resubmission:</strong> Update fields like Base Rate or Fuel Surcharge accurately before resubmission.</li>
+        <li><strong>Validation Before Submission:</strong> Validate updated rates using the Rate Details view.</li>
+        <li><strong>Amendment Tracking:</strong> Ensure unique amendment numbers are generated and linked correctly.</li>
+    </ul>
+
+    <h3>6. OFA and RFA Process Issues</h3>
+    <p><strong>Problem:</strong> Issues arise when managing Offers for Amendment (OFA) or Requests for Amendment (RFA).</p>
+    <p><strong>Potential Causes:</strong></p>
+    <ul>
+        <li>Incomplete or invalid OFA data during submission.</li>
+        <li>Conflicts in carrier or lane details.</li>
+    </ul>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li><strong>Review OFA Details:</strong> Validate the OFA file for missing or invalid fields.</li>
+        <li><strong>Resolve Conflicts:</strong> For overlapping lanes, revise specific entries before submitting.</li>
+        <li><strong>Track Unique Identifiers:</strong> Ensure unique OFA reference numbers are generated and linked to the correct contract.</li>
+    </ul>
+
+    <!-- NEW CATEGORY -->
+    <h3>7. Simulation and Rate Comparison Issues</h3>
+    <p><strong>Problem:</strong> Simulation results show unexpected differences or rates won't compare correctly.</p>
+    <p><strong>Potential Causes:</strong></p>
+    <ul>
+        <li>Different shipment profiles selected for comparison.</li>
+        <li>Rate effective dates are outside the valid period.</li>
+        <li>Rates were updated after simulation was initiated.</li>
+        <li>Exchange rates or surcharge percentages changed.</li>
+    </ul>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>Verify shipment profiles match between compared rates.</li>
+        <li>Check validity periods overlap for the rates being compared.</li>
+        <li>Reload the page and re-initiate the simulation.</li>
+        <li>Confirm fuel surcharge percentages haven't changed.</li>
+        <li>Check if rates have been updated by another user.</li>
+        <li>Clear browser cache and try again.</li>
+        <li>Contact support if issue persists.</li>
+    </ul>
+</section>
+
+        
+    </div>
+    
+    
+
+    <script>
+        // Highlight the active section dynamically while scrolling
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".sidebar ul li a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            const offset = 80; // Adjust if necessary for your layout
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - offset;
+                const sectionHeight = section.offsetHeight;
+
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active-section");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active-section");
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
